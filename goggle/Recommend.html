@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>goggle</title>
+    <script src="js/showthemecolor.js"></script>
+    <script src="js/getvote.js"></script>
+    <script src="jquery-1.7.1.min.js"></script>
+    <script src="js/themecolor.js"></script>
+    <style type="text/css">
+        body {
+            background-color: #f2f2eb;
+            width: 270px;
+        }
+        a {
+            font-weight:bolder;
+            text-decoration:none;
+            font-family:Arial;
+            color:#768d87;
+            font-size:12pt;
+        }
+        #main {
+            background-color:#f2f2eb;
+        }
+        .text {
+            font-size: 12pt;
+            color: #333;
+        }
+        .setpic {
+            width: 250px;
+            margin: 0 auto;
+        }
+        .btncs {
+            width: 35px;
+            height: 30px;
+            border: 0px;
+            color: #fff;
+            font-size:18pt;
+            text-shadow: 1px 1px #999;
+            background-color: #9FC9EB;            
+        }
+            .btncs:hover {
+                border: 0px;
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color: #6c7c7c;
+            }
+        #th7 {
+            width: 120px;
+            height: 35px;
+            border: 0px;
+            color: #fff;
+            font-size:12pt;
+            text-shadow: 0 1px rgba(0,0,0,0.1);
+            background-color: #1d85e7;
+            margin-left:75px;
+        }
+            #th6:hover {
+                border: 0px;
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color: #6c7c7c;
+            }
+
+        #s1,#s2,#s3,#s4,#s5,#s6,.num {
+            border-radius: 10px;
+            font-size: 16pt;
+            font-weight: 900;
+            margin-left:10px;
+        }
+         #word {
+            font-size: 16pt;
+            color: #20659d;            
+            text-align: center;
+            font-family: 微軟正黑體;
+        }
+
+    </style>
+    
+</head>
+<body>
+      <p id="word">推薦顏色</p>
+    <div id="main">
+        <div class="setpic">
+            <input type="button" value="+" id="th1" class="btncs" />
+            <span id="s1"></span>
+            <span class="text">票數:</span>
+            <span id="n1" class="num"></span>
+        </div>
+        <br />
+        <div class="setpic">
+            <input type="button" value="+" id="th2" class="btncs" />
+            <span id="s2" ></span>
+            <span class="text">票數:</span>
+            <span id="n2" class="num"></span>
+        </div>
+        <br />
+        <div class="setpic">
+            <input type="button" value="+" id="th3" class="btncs" />
+            <span id="s3" ></span>
+            <span class="text">票數:</span>
+            <span id="n3" class="num"></span>
+        </div>
+        <br />
+        <div class="setpic">
+            <input type="button" value="+" id="th4" class="btncs" />
+            <span id="s4" ></span>
+            <span class="text">票數:</span>
+            <span id="n4" class="num"></span>
+        </div>
+        <br />
+        <div class="setpic">
+            <input type="button" value="+" id="th5" class="btncs" />
+            <span id="s5" ></span>
+            <span class="text">票數:</span>
+            <span id="n5" class="num"></span>
+        </div>
+        <br />
+         <div class="setpic">
+            <input type="button" value="+" id="th6" class="btncs" />
+            <span id="s6"></span>
+            <span class="text">票數:</span>
+            <span id="n6" class="num"></span>
+        </div>
+              <br />  
+        <input type="button" value="移除設定" id="th7" />
+    </div>
+    <br />
+    <a href="goggle.html"> 
+            <img alt="" class="auto-style1" src="icon/Previous.png"  style="height:12px;height:12px;"/>
+
+           </a>
+</body>
+</html>

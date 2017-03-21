@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>G.lux Options</title>   
+    <script src="jquery-1.10.1.min.js"></script>
+    <script src="filter.js"></script>
+    <script src="color-picker/js/colpick.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="color-picker/css/colpick.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        body {
+            background-color: #e8e7e2;
+        }
+        a {
+            font-weight:bolder;
+            text-decoration:none;
+            font-family:Arial;
+            color:#768d87;
+            font-size:12pt;
+        }
+        #word {
+            font-size: 16pt;
+            color: #20659d;            
+            text-align: center;
+            font-family: 微軟正黑體;
+        }
+    </style>
+    </head>  
+    <body id="mainbody">
+        <p id="word">濾光</p>
+        <div class="container" id="maincontainer">
+            <div id="colour"> 
+                <span id="tungsten" data-value="#008000"></span>
+                <span id="halogen" data-value="#FFD6AA"></span>
+                <span id="flourescent" data-value="#FFE0E5"></span>
+                <span id="daylight" data-value="#C9E2E1"></span>
+                <span id="black" data-value="#000000"></span>
+                <span id="white" data-value="#FFFFFF"></span>
+                <span id="custom" title="Choose a colour" data-value="Custom" class="color-box"><img src="gnome-color-chooser.png" style="height:50px;width:50px;"></span>
+                <span id="off" title="Turn Off" data-value="Off"><img src="no.png" style="height:50px;width:50px;"></span>
+            </div>
+            <br />
+            <div id="slider">                
+                <label for='trans'>濃度值</label>
+                <input type="range" id="trans" min="0" max="60" value="100" />
+            </div>
+            <input id="saveBtn" type="button" value="保存" />
+        </div> 
+        <!--<div  style="text-align:center"></div>-->
+        
+        <br />
+        <div style="text-align:left;">
+           <a href="goggle.html"> 
+            <img alt="" class="auto-style1" src="icon/Previous.png"  style="height:12px;height:12px;"/>
+
+           </a>
+
+        </div>
+        
+    </body>
+</html>

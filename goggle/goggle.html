@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <title>goggle</title>
+    <!--回首頁-->
+     <script src="js/setinto.js"></script>
+    <script src="jquery-1.7.1.js"></script>
+    <script src="js/showusername.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/sendset.js"></script>
+
+    <style type="text/css">
+
+        body {
+            background-color: #e8e7e2; /*首頁背景顏色#e8e7e2*/
+           
+        }
+        .control {
+            
+            width: 100px;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            font-family: 微軟正黑體;
+            font-weight: bolder;
+            color: #20659d; /*首頁按鈕字體顏色#*/
+        }
+
+        #wrapper {
+            width: 210px;
+            margin: 0px auto;
+            
+            /*border: 1px solid #000;*/
+        }
+
+        hr {
+            width: 200px;
+            margin:2px;            
+        }
+
+        #word {
+            font-size: 20px;
+            color: #0b27f9;    /*首頁標題顏色#*/
+            font-weight: bolder;
+            text-align: center;
+            font-family: 微軟正黑體;
+        }
+
+
+        #sign {
+            margin: 0 auto;
+        }
+
+        #filter_btn {
+            background-image: url(icon/light83.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:64px 64px ;
+        }
+
+        #font_btn {
+            background-image: url(icon/fontsize.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:64px 64px ;
+        }
+
+        #Re_btn {
+            background-image: url(icon/printing3.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:64px 64px ;
+        }
+
+        #back_btn {
+            background-image: url(icon/color5.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:64px 64px ;
+        }
+
+        #Sy_btn {
+            background-image: url(icon/responsive16.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:64px 64px ;
+        }
+
+        #bell_btn {
+         background-image: url(icon/bell.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:64px 64px ;
+        
+        
+        }
+
+
+
+        .index_btn1_class {   /*按鈕漸層顏色 #9FC9EB 5% , #348dd5
+            100%*/
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin: 15px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid #dcdcdc; /*按鈕邊框顏色#dcdcdc*/
+            padding: 9px 18px;
+            text-decoration: none;
+            background: -moz-linear-gradient( center top, #9FC9EB 5%, #348dd5 100% );
+            background: -ms-linear-gradient( top, #9FC9EB 5%, #348dd5 100% );
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+            background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #9FC9EB), color-stop(100%, #348dd5) );
+            background-color: #9FC9EB; /*首頁按鈕顏色#*/
+            color: #000;
+            display: inline-block;
+        }
+
+            .index_btn1_class:hover {
+                background: -moz-linear-gradient( center top, #348dd5 5%, #348dd5 100% );
+                background: -ms-linear-gradient( top, #348dd5 5%, 
+                    #348dd5 100% );
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#9FC9EB');
+                background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #348dd5), color-stop(100%, #9FC9EB) );
+                background-color: #348dd5;
+            }
+
+        .index_btn2_class {
+            width: 200px;
+            height: 35px;
+            margin: 8px;
+            font-size: 16px;
+            font-family: 微軟正黑體;
+            font-weight: bolder;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid #dcdcdc; /*按鈕邊框顏色#dcdcdc*/
+            padding: 9px 18px;
+            text-decoration: none;
+            background: -moz-linear-gradient( center top, #9FC9EB 5%, #348dd5 100% );
+            background: -ms-linear-gradient( top, #9FC9EB 5%, #348dd5 100% );
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+            background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #9FC9EB), color-stop(100%, #6db9f3) );
+            background-color: #9FC9EB;
+            color: #fff;
+            display: inline-block;
+
+        }
+            .index_btn2_class:hover {
+                background: -moz-linear-gradient( center top, #348dd5 5%, #348dd5 100% );
+                background: -ms-linear-gradient( top, #348dd5 5%, #348dd5 100% );
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#9FC9EB');
+                background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #6c7c7c), color-stop(100%, #9FC9EB) );
+                background-color: #6c7c7c;
+            }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+       <!-- <span id="word">功能列表</span>--> <span id="username"></span>
+        <span id="fb_btn" style="float: right;">
+            <img src="icon/home.png" id="home_btn" title="進入 Goggle首頁" style="height: 30px; width: 30px;" />
+            <img src="icon/btn_fb.png" id="fb" title="進入Goggle粉絲頁" style="height: 30px; width: 30px;" />
+        </span>
+        <hr />
+        <div class="control">
+            <a href="filter.html"><input type="button" id="filter_btn" class="index_btn1_class" /></a>
+            <span>濾光</span>
+        </div>
+        <div class="control">
+            <a href="fontsize.html"><input type="button" id="font_btn" class="index_btn1_class" title="變更網頁字體大小"/></a>
+            <span>字體大小</span>
+        </div>
+        <div class="control">
+            <a href="Recommend.html"><input type="button"  id="Re_btn" class="index_btn1_class"/></a>
+            <span>推薦顏色</span>
+        </div>
+        <div class="control">
+            <a href="backcolor.html"><input type="button" id="back_btn" class="index_btn1_class"/></a>
+            <span>背景顏色</span>
+        </div>
+        <div class="control">
+            <a href="Sy.html"><input type="button" id="Sy_btn" class="index_btn1_class"/></a>
+            <span>同步</span>
+        </div>
+            <div class="control">
+            <a href="Remind.html"><input type="button" id="bell_btn" class="index_btn1_class"/></a>
+            <span>提醒</span>
+        </div>           
+       </div>           
+        
+        <div id="sign">
+            <a href="login.html">
+                <input type="button" class="index_btn2_class" id="set_btn" title="點此進行會員登入，才能使用同步功能" value="會員登入" />
+            </a>            
+            
+
+            <input class="index_btn2_class" id="form_btn" value="登出" type="button" />
+
+            <input class="index_btn2_class" id="Register_btn" value="註冊" type="button"  title="前往網站註冊頁面"/>
+
+            <input type="button" class="index_btn2_class" id="btn_save" value="儲存" title="儲存濾鏡顏色及背景顏色"/>
+
+              <input class="index_btn2_class" id="getsetval" value="套用設定值" type="button"  title="儲存背景顏色、濾鏡顏色"/>
+	&nbsp;</div>
+
+
+    <span id="timeval"></span>
+</body>
+</html>
+

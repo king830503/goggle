@@ -1,0 +1,135 @@
+﻿<!Doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Background Color</title>
+<script src="js/clearcolor.js"></script>
+<script type="text/javascript" src="colorTransform.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+<style type="text/css">
+    body {
+        background-color: #e8e7e2;
+        width:225px;
+    }
+    a {
+        font-weight: bolder;
+        text-decoration: none;
+        font-family: Arial;
+        color: #768d87;
+        font-size: 12pt;
+    }
+    label {
+        font-size: 12pt;
+        color: #333;        
+        margin-left:85px;
+    }
+    #word {
+            font-size: 16pt;
+            color: #20659d;            
+            text-align: center;
+            
+        }
+    #optionbar {
+        margin:0 auto;
+    }
+	#color-box{
+		width:220px;
+		height:180px;       
+	}
+	#color-box div{
+		width:50px;
+		height:50px;
+		float:left;
+		border: 1px solid #001100;
+		margin:1px;
+        border-radius:99em;
+	}	
+	div.red{background-color:#FF0000;}
+	div.yellow{background-color:#FFFF00;}
+	div.green{background-color:#00FF00;}
+	div.IndianRed{background-color:#CD5C5C;}
+	div.gray{background-color:#808080;}
+	div.GoldenRod{background-color:#DAA520;}
+	div.black{background-color:#000000;}
+	div.indigo{background-color:#4B0082;}	
+	div.white{background-color:#FFFFFF;}
+	div.PaleGoldenRod{background-color:#EEE8AA;}
+    div.blue{background-color: #0000FF;}
+	div.focus{box-shadow: 0px 0px 1px 2px #9ACD32;}
+	input#opRange{width:97%;}
+    input[type="range"] {
+            -webkit-appearance: none;
+            overflow: hidden; /* 限定範圍 */
+            width: 180px;
+            height: 20px;
+            outline: none; /* 避免點選會有藍線或虛線 */
+            background: none;
+        }
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                position: relative; /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+                width: 10px;
+                height: 10px;
+                background: #9FC9EB;
+                border-radius: 50%;
+                transition: .2s; /* 點選放大時候的漸變時間 */
+            }
+                input[type="range"]::-webkit-slider-thumb:before,
+                input[type="range"]::-webkit-slider-thumb:after {
+                    position: absolute;
+                    top: 3px;
+                    width: 2000px; /* 長度很長沒關係，因為剛剛有用 overflow:hidden 了 */
+                    height: 4px;
+                    content: "";
+                    pointer-events: none; /* 讓滑鼠可以點擊穿透偽元素，不然會點不到下面 */
+                    transition: .2s;
+                }
+                input[type="range"]::-webkit-slider-thumb:before {
+                    left: -1997px;
+                    background: #9FC9EB;
+                }
+                input[type="range"]::-webkit-slider-thumb:after {
+                    left: 10px;
+                    background: #aaa;
+                }
+            input[type="range"]:active::-webkit-slider-thumb:before,
+            input[type="range"]:active::-webkit-slider-thumb:after {
+                top: 6px;
+            }
+            input[type="range"]:active::-webkit-slider-thumb {
+                width: 16px;
+                height: 16px;
+            }
+                input[type="range"]:active::-webkit-slider-thumb:after {
+                    left: 16px;
+                }
+</style>
+
+</head>
+<body>
+    <p id="word">背景顏色</p>
+	<div id="color-box">
+		<div class="colorbox red" title="red"></div>
+		<div class="colorbox yellow" title="yellow"></div>
+		<div class="colorbox gray" title="gray"></div>
+		<div class="colorbox green" title="green"></div>
+		<div class="colorbox IndianRed" title="IndianRed"></div>
+        <div class="colorbox GoldenRod" title="GoldenRod"></div>
+		<div class="colorbox black" title="black"></div>
+		<div class="colorbox indigo" title="indigo"></div>
+		<div id="nolux" title="clear" >
+            <img src="erase.png"  style="width:50px;height:50px;"/></div>
+		<div class="colorbox PaleGoldenRod" title="PaleGoldenRod"></div>
+        <div class="colorbox white" title="white"></div>
+		<div class="colorbox blue" title="blue"></div>
+	</div>
+	<div id="optionbar">
+        <label for="opRange">濃度</label>
+		<input type="range" id="opRange" max="60" />
+	</div>
+    <br />
+    <a href="goggle.html">
+     <img class="auto-style1" src="icon/Previous.png"  style="height:12px;height:12px;"/>
+    </a>
+</body>
+</html>

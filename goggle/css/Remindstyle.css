@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    
+    width: 360px;
+    height: 200px;
+    background-color: #e8e7e2;
+}
+
+/*h3 { 
+    margin: 0 auto;
+    color: #f7f7f7;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+}*/
+a {
+    font-weight: bolder;
+    text-decoration: none;
+    font-family: Arial;
+    color: #768d87;
+    font-size: 12pt;
+}
+#title {
+    margin: 5px;
+    font-size: 30px;
+    color: #0b8b78;
+    font-weight: bolder;
+    text-align: center;
+    font-family: ·L³n¥¿¶ÂÅé;
+   
+}
+#container {
+    margin: 0 auto;
+    /*padding: 1em;*/
+    max-width: 95%;
+    background-color: #e8e7e2;
+    -webkit-border-radius: 3px;   
+    border-radius: 3px;  
+}
+
+#reTimePad {
+    display: block;
+    margin: 0 0 0.35em 0;
+    min-width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman';
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.78);
+    font-size: 1.5em;
+    line-height: 40px;
+    border: 1px solid #272727;
+    -webkit-border-radius: 3px;   
+    border-radius: 3px; 
+    outline: none;
+}
+
+#reTimePad:disabled {
+    color: rgba(0, 0, 0, 0.78);
+    background-color: #B2D6FE;
+}
+
+#reTimePad:focus {
+    border: 1px solid #272727;
+}
+
+#reTimePad::-webkit-clear-button, #reTimePad::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type=radio], input[type=checkbox] {
+    display:none;
+    -webkit-appearance: none;    
+}
+
+.toggleBtn {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 49%;
+    overflow: auto;
+}
+button, span {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;   
+    color: #272727;
+    background:#d3f2f7;    
+    font-size: 0.8em;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 41px;
+    border: solid 1px #272727;
+    -webkit-border-radius: 3px;   
+    border-radius: 3px;  
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    overflow: auto;  
+}
+
+button:hover, span:hover {
+    color: #272727;
+    background: #B2D6FE;    
+    cursor: pointer;
+}
+
+.browser {
+    -webkit-border-radius: 3px 0 0 3px;   
+    border-radius: 3px 0 0 3px;    
+}
+
+.tab {
+    -webkit-border-radius: 0 3px 3px 0;   
+    border-radius: 0 3px 3px 0;  
+}
+
+input[type=radio]:checked + span, input[type=checkbox]:checked + span {
+  color: #fff;
+  background: #272727;
+}
+
+input[type=radio]:checked + span:before, input[type=checkbox]:checked + span:before {
+  font-family: 'Times New Roman';
+  font-size: 0.875em;  
+}

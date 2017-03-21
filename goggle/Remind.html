@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <style>
+        body {
+            width: 200px;
+            background-color: #e8e7e2;
+        }
+        /*#display, #settings {
+            margin-top: 4px;
+        }
+
+        #modify {
+            margin-bottom: 4px;
+        }
+
+        img {
+            width: 10px;
+            height: 10px;
+        }
+
+        
+        }*/
+        div {
+            margin: 0 0 0.5em 0;
+            
+        }
+        a {
+            font-weight:bolder;
+            text-decoration:none;
+            font-family:Arial;
+            color:#768d87;
+            font-size:12pt;
+        }
+        #title {
+            font-size: 16pt;
+            color: #20659d;    /*首頁標題顏色#*/
+            font-weight:normal;
+            text-align: center;
+            font-family: 微軟正黑體;
+        }
+
+        #bar {
+            font-weight: bold;
+            font-size: 30pt;
+            color: #414141;            
+            padding: 45px;
+            text-align: center;
+            font-family: Helvetica,Ubuntu,Arial,sans-serif,微軟正黑體;
+        }
+
+        #start {
+            background-image: url(img/media23.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #wrench {
+            background-image: url(img/gear39.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #cancel {
+            background-image: url(img/media26.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #resume {
+            background-image: url(img/media23.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #pause {
+            background-image: url(img/button46.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #restart {
+            background-image: url(img/update17.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .setBtn {
+            width: 80px;
+            height: 35px;            
+            color: #fff;
+            font-size:16pt;
+            text-shadow: 0 1px rgba(0,0,0,0.1);
+            background-color: #9FC9EB;
+            margin:5px;           
+        }
+            .setBtn:hover {                
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color: #348dd5;
+            }
+
+        .control {
+            width: 50px;
+            height: 35px;            
+            color: #fff;
+            font-size:16pt;
+            text-shadow: 0 1px rgba(0,0,0,0.1);
+            background-color: #348dd5;
+            margin:5px;           
+        }
+            .control:hover {                
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color: #9FC9EB;
+            }
+
+        input[type="text"] {
+            width: 45px;
+            height: 25px;
+            font-size: 16px;
+            margin-bottom: 3px;
+            -webkit-appearance: none;
+            background: #fff;
+            border: 1px solid #d9d9d9;
+            border-top: 1px solid #c0c0c0;
+            /* border-radius: 2px; */
+            /*padding: 0 8px;*/
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+            input[type="text"]:hover {
+                border: 1px solid #b9b9b9;
+                border-top: 1px solid #a0a0a0;
+                -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+                -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+                box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+            }
+            
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 20px;
+            -moz-opacity: 0;
+            -webkit-opacity: 0;
+            -o-opacity: 0;
+        }
+
+            input[type="radio"] + label {
+                position: relative;
+                padding: 0 0 0 25px;
+                font-size: 16pt;
+                line-height: 30px;
+                margin: 0 0 20px 0;
+            }
+                input[type="radio"] + label:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 4px;
+                    height: 18px;
+                    width: 18px;
+                    background: white;
+                    border: 2px solid gray;
+                    box-shadow: inset 0px 0px 0px 2px white;
+                    -webkit-box-shadow: inset 0px 0px 0px 2px white;
+                    -moz-box-shadow: inset 0px 0px 0px 2px white;
+                    -o-box-shadow: inset 0px 0px 0px 2px white;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -o-border-radius: 30px;
+                }
+
+            input[type="radio"]:checked + label:before {  /*按鈕中間顏色*/
+                background: #348dd5;   
+            }
+    </style>
+    <title>goggle</title>
+</head>
+<body>
+    <script src="js/remind.js"></script>
+    <span id="title">設定提醒時間</span>
+
+    <div id="display">
+        <div>
+            <span id="bar" style="width:100%"></span>
+        </div>
+    </div>
+
+    <div id="modify">
+        <input type="button" id="cancel" class="control" />
+        <input type="button" id="resume" class="control" />
+        <input type="button" id="pause" class="control" />
+        <input type="button" id="restart" class="control" />
+    </div>
+
+    <div id="settings">
+        <form class="well" name="choices">
+            <div class="radio">
+                <input type="radio" id="radio1" name="radio" value="0" checked="checked" class="css-checkbox" />
+                <label for="radio1" id="s0" class="css-label">1</label>
+                <span>分</span>
+            </div>
+
+            <div class="radio">
+                <input type="radio" id="radio2" name="radio" value="1" class="css-checkbox" />
+                <label for="radio2" id="s1" class="css-label">5</label>
+                <span>分</span>
+            </div>
+
+            <div class="radio">
+                <input type="radio" id="radio3" name="radio" value="2" class="css-checkbox" />
+                <label for="radio3" id="s2" class="css-label">10</label>
+                <span>分</span>
+            </div>
+
+            <div class="radio">
+                <input type="radio" id="radio4" name="radio" value="3" class="css-checkbox" />
+                <label for="radio4" id="s3" class="css-label">30</label>
+                <span>分</span>
+            </div>
+
+            <input type="button" id="start" class="setBtn" />
+            <input type="button" id="wrench" class="setBtn" />
+        </form>
+    </div>
+
+    <a href="goggle.html">
+        <img class="auto-style1" src="icon/Previous.png" style="height: 12px; height: 12px;" />
+    </a>
+    
+    <a href="popup.html" title="統計使用瀏覽器時間，必須登入會員">
+        <img src="icon/total.png" style="height: 15px; width: 15px;" />
+    </a>
+    
+</body>
+</html>

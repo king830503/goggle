@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>goggle</title>
+    <script src="js/showloadimg.js"></script>    
+    <script src="getcolor.js"></script>
+    <script src="js/LightScreen.js"></script>
+    <script src="eventPage.js"></script>
+    <script src="js/addclock.js"></script>
+    <script src="jquery-1.7.1.min.js"></script>
+    <script src="js/checklogin.js"></script>
+    <style type="text/css">
+        body {
+            width: 270px;
+            background-color: #e8e7e2;
+        }
+        a {
+            font-weight:bolder;
+            text-decoration:none;
+            font-family:Arial;
+            color:#768d87;
+            font-size:12pt;
+        }
+        span {
+            font-size: 12pt;
+            color: #333;
+        }
+        hr {
+            visibility:hidden;
+        }
+        #word {
+            font-size: 16pt;
+            color: #20659d;            
+            text-align: center;
+            font-family:微軟正黑體;
+        }
+        .setBtn {
+            width: 120px;
+            height: 35px;
+            border: 0px;
+            color: #fff;
+            font-size:16pt;
+            text-shadow: 0 1px rgba(0,0,0,0.1);
+            background-color: #9FC9EB;
+            margin:5px;           
+        }
+            .setBtn:hover {
+                border: 0px;
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color: #6c7c7c;
+            }
+
+    </style>
+    
+   
+</head>
+<body>
+    <p id="word">與手機亮度同步</p>
+    <span>使用者帳號：</span><span id="username"></span>
+    <hr />
+     <span>當前亮度值：</span>
+    <span id="lightval"></span>
+    <img id="luxload" src="img/load.gif" style="width:30px; height:30px;"/>
+    <br />
+    <hr />
+    <input type="button" value="on" id="alarmOn" class="setBtn"/>
+    <input type="button" value="off" id="alarmOff" class="setBtn"/>
+    <hr />
+    
+    <a href="goggle.html">
+        <img class="auto-style1" src="icon/Previous.png" style="height:12px;height:12px;"/>
+    </a>
+</body>
+</html>

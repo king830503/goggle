@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>goggle</title>  
+    <script src="js/agefont.js"></script>
+    <script src="jquery-1.7.1.js"></script>
+    <script src="js/fontchange.js"></script>
+    <style type="text/css">
+        body {
+            width:270px;
+            background-color: #e8e7e2;
+        }
+        p {
+            font-size: 14pt;        
+            
+            color: #20659d;
+        }
+        a {
+            font-weight:bolder;
+            text-decoration:none;
+            font-family:Arial;
+            color:#768d87;
+            font-size:12pt;
+        }
+
+        #fontvalue {
+            font-size:14pt;
+        }
+
+        
+        #btn_goodfont {
+            width: 100px;
+            height: 30px;
+            border: 0px;
+            color: #fff;
+            font-size:12pt;
+            text-shadow: 0 1px rgba(0,0,0,0.1);
+            background-color: #9FC9EB;
+            margin-left:75px;
+            background-image: url(img/glass70.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+            #btn_goodfont:hover {
+                border: 0px;
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color: #348dd5;
+            }
+
+        #main {           
+            width:230px;
+            margin:0 auto;
+        }
+
+        #text {
+            width: 100px;
+            height: 30px;
+            border: 0px;
+            color: #fff;
+            font-size:12pt;
+            text-shadow: 0 1px rgba(0,0,0,0.1);
+            background-color:  #348dd5;
+            margin-left:75px;
+        }
+            #text:hover {
+                border: 0px;
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color:#9FC9EB;
+            }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            overflow: hidden; /* 限定範圍 */
+            width: 180px;
+            height: 20px;
+            outline: none; /* 避免點選會有藍線或虛線 */
+            background: none;
+        }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                position: relative; /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+                width: 10px;
+                height: 10px;
+                background: #9FC9EB;
+                border-radius: 50%;
+                transition: .2s; /* 點選放大時候的漸變時間 */
+            }
+
+                input[type="range"]::-webkit-slider-thumb:before,
+                input[type="range"]::-webkit-slider-thumb:after {
+                    position: absolute;
+                    top: 3px;
+                    width: 2000px; /* 長度很長沒關係，因為剛剛有用 overflow:hidden 了 */
+                    height: 4px;
+                    content: "";
+                    pointer-events: none; /* 讓滑鼠可以點擊穿透偽元素，不然會點不到下面 */
+                    transition: .2s;
+                }
+
+                input[type="range"]::-webkit-slider-thumb:before {
+                    left: -1997px;
+                    background: #9FC9EB;
+                }
+
+                input[type="range"]::-webkit-slider-thumb:after {
+                    left: 10px;
+                    background: #aaa;
+                }
+
+            input[type="range"]:active::-webkit-slider-thumb:before,
+            input[type="range"]:active::-webkit-slider-thumb:after {
+                top: 6px;
+            }
+
+            input[type="range"]:active::-webkit-slider-thumb {
+                width: 16px;
+                height: 16px;
+            }
+
+                input[type="range"]:active::-webkit-slider-thumb:after {
+                    left: 16px;
+                }
+    </style>
+</head>
+<body>       
+    <p id="title">推薦大小</p>
+    <!--<div id="btn_goodfont" style="width:80px; height:30px; background-color:#0b8b78"; title="系統根據使用者年齡，推薦字體大小">
+        <img src="img/glass69.png"  style="margin-left:25px;"/>
+    </div>-->
+    <input type="button" id="btn_goodfont" />
+    <p>字型大小</p>  
+
+    <div id="main">
+    <input type="range" id="fontsize" name="size" min="10" max="20" step="1"/>
+    <span id="fontvalue"></span> 
+    </div>     
+    
+    <input id="text" type="button" value="確定"/> 
+    <br />   
+    <br />
+
+    <a href="goggle.html">
+    <img alt="" class="auto-style1" src="icon/Previous.png"  style="height:12px;height:12px;"/>
+    </a>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+
+   "background": {
+      "persistent": true,
+      "scripts": [ "contentscript.js","background.js","eventPage.js","jquery-1.10.1.min.js","background_time.js","content.js", "popup.js", "colorTransform.js","js/themecolor.js","background1.js"]
+   },
+   
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google.com ; object-src 'self'",
+
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "goggle.html",
+      "default_title": "Change the page background color.",
+	  "permissions": [ "background", "tabs" ]
+	
+   },
+   "description": "Welcome to goggle",
+   "icons": {
+      "128": "icon.png"
+   },
+   "content_scripts": [ {
+      "css": [ "mystyles.css" ],
+      "js": [ "jquery-1.7.1.min.js", "contentscript.js","getcolor.js","eventPage.js","adcontentscript.js","jquery.js"],
+      "matches": [ "\u003Call_urls>"],
+      "run_at": "document_end"
+   } ],
+
+
+   "manifest_version": 2,
+   "name": "Goggle",
+   "permissions": [ "idle", "tabs" ,"http://*/*", "https://*/*","alarms"],
+   
+   "version": "1.2"
+}

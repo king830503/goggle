@@ -1,0 +1,197 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    text-align: center;    
+    width: 200px;   
+    background-color:#e8e7e2;
+}
+
+label {
+    font-size:12pt;
+    color:#333;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    overflow: hidden; /* 限定範圍 */
+    width: 180px;
+    height: 20px;
+    outline: none; /* 避免點選會有藍線或虛線 */
+    background: none;
+}
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        position: relative; /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+        width: 10px;
+        height: 10px;
+        background: #9FC9EB;
+        border-radius: 50%;
+        transition: .2s; /* 點選放大時候的漸變時間 */
+    }
+
+        input[type="range"]::-webkit-slider-thumb:before,
+        input[type="range"]::-webkit-slider-thumb:after {
+            position: absolute;
+            top: 3px;
+            width: 2000px; /* 長度很長沒關係，因為剛剛有用 overflow:hidden 了 */
+            height: 4px;
+            content: "";
+            pointer-events: none; /* 讓滑鼠可以點擊穿透偽元素，不然會點不到下面 */
+            transition: .2s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:before {
+            left: -1997px;
+            background:#9FC9EB;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:after {
+            left: 10px;
+            background:#aaa;
+        }
+
+    input[type="range"]:active::-webkit-slider-thumb:before,
+    input[type="range"]:active::-webkit-slider-thumb:after {
+        top: 6px;
+    }
+
+    input[type="range"]:active::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+    }
+
+        input[type="range"]:active::-webkit-slider-thumb:after {
+            left: 16px;
+        }
+
+#maincontainer {
+    height:270px;    
+}
+
+#colour {
+    border: 0px;
+    outline: none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+color:after {
+    content: "&#x25BC;";
+    float: right;
+}
+
+#colour span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10em;
+}
+
+#tungsten {
+    background-color: #008000;
+    border: 1px solid #000;
+}
+
+#halogen {
+    background-color: #FFD6AA;
+    border: 1px solid #000;
+}
+
+#flourescent {
+    background-color: #FFE0E5;
+    border: 1px solid #000;
+}
+
+#daylight {
+    background-color: #C9E2E1;
+    border: 1px solid #000;
+}
+
+#black {
+    background-color: #000000;
+    border: 1px solid #000;
+}
+
+#white, #off {
+    background-color: #FFFFFF;
+    border: 1px solid #000;
+}
+
+.title {
+    padding: 10px;
+}
+
+
+#saveBtn {
+    width: 160px;
+    height: 30px;
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: #348dd5;
+    margin-top: 10px;
+    text-align: center;
+}
+
+    #saveBtn:hover {
+        cursor: pointer;
+        border: 0px;
+        text-shadow: 0 1px rgba(0,0,0,0.3);
+        background-color: #9FC9EB;
+        
+    }
+
+    #saveBtn:active {
+        border-right-width: 2px;
+        border-bottom-width: 2px;
+    }
+
+#custom img, #off img {
+    width: 50px;
+    height: 50px;
+}
+
+.colpick {
+    top: 95px!important;
+    left: auto!important;
+    width: 200px!important;
+    height: 240px!important;
+}
+
+.colpick_new_color {
+    position: absolute!important;
+    left: 6px!important;
+    top: 170px!important;
+    border-right: 1px solid #8f8f8f;
+}
+
+.colpick_current_color {
+    position: absolute!important;
+    left: 7px!important;
+    top: 205px!important;
+    border-right: 1px solid #8f8f8f;
+}
+
+.colpick_hex_field {
+    left: 126px!important;
+    top: 175px!important;
+}
+
+.colpick_rgb_r {
+    top: 168px!important;
+    left: 47px!important;
+}
+
+.colpick_rgb_g {
+    top: 192px!important;
+    left: 47px!important;
+}
+
+.colpick_rgb_b {
+    top: 216px!important;
+    left: 47px!important;
+}
+
+.colpick_submit {
+    left: 125px!important;
+    top: 205px!important;
+}
